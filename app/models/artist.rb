@@ -7,4 +7,6 @@ class Artist < ApplicationRecord
   validates :price, presence: true
   validates :description, presence: true
   validates :photo_url, presence: true
+
+  has_one_attached :photo
 end
