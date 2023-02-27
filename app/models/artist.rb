@@ -6,7 +6,6 @@ class Artist < ApplicationRecord
   validates :category, presence: true
   validates :price, presence: true
   validates :description, presence: true
-  validates :photo_url, presence: true
 
   has_one_attached :photo
 end
