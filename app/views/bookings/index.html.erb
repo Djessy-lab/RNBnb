@@ -1,0 +1,6 @@
+<h2>BOOKINGS</h2>
+<% @bookings.each do |booking| %>
+  <hr>
+  <%= booking.artist.name %> - <%= booking.artist.description %> - <%= booking.date %>
+  <hr>
+<% end %>
