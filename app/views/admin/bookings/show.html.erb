@@ -1,0 +1,6 @@
+<h1><%= @booking.artist.name %></h1>
+<ul>
+  <li>Manager : <%= @booking.user.first_name.upcase %><%= @booking.user.last_name %></li>
+  <li>Date of booking : <%= @booking.date %></li>
+  <li>Validated : <%= @booking.validated %></li>
+</ul>
