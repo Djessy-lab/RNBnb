@@ -10,3 +10,12 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+// Google Font
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@300&family=Tilt+Neon&display=swap');
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: black;
+}

@@ -1,5 +1,29 @@
-<h1>Artist List</h1>
+<div class="cards-index">
+  <% @artists.each do |artist| %>
+  <div class="card-index">
+    <div class="card-index-text">
+        <div>
+          <h1><%= artist.name.upcase %></h1>
+          <h2><%= artist.category %></h2>
+        </div>
+        <div class="card-index-text-cp">
+          <p><%= artist.price %></p>
+          <i class='fa-solid fa-euro-sign'></i>
+        </div>
+    </div>
+    <div class="bloc-photo-button">
+      <%= link_to artist_path(artist) do %>
+        <div class="button-booking">
+            <p><i class='fa-solid fa-microphone-lines fa-flip'></i> BOOK ME</p>
+        </div>
+      <% end %>
+      <div class="card-index-photo">
+        <%= cl_image_tag artist.photo.key, height: 300, width: 300, crop: :thumb %>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
 
-<% @artists.each do |artist| %>
-    <p><%= link_to artist.name, artist_path(artist) %></p>
-<% end %>
+
+    <%# <p><%= link_to artist.name, artist_path(artist) %></p>

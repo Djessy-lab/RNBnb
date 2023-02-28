@@ -1,7 +1,9 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: #181818;
   position: sticky;
+  z-index: 2;
+  top: 0;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -23,8 +25,33 @@
   padding: 0;
   margin: 0 5px;
   display: inline;
+  color: #D5FF5D;
+
+  &:hover {
+    color: #b15cff;
+  }
 }
 
 .dropdown-menu {
   border-radius: 5px;
+  background-color: #181818;
+}
+
+.dropdown-item {
+  color: #D5FF5D;
+
+  &:hover {
+    color: #b15cff;
+    background-color: #181818;
+  }
+}
+
+.logo {
+  color: #b15cff;
+  font-family: 'Tilt Neon', cursive;
+  font-size: 28px;
+}
+
+.avatar {
+  margin-left : 30px;
 }
