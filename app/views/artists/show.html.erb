@@ -5,6 +5,10 @@
 </p>
 
 <%= simple_form_for [@artist, @booking] do |f| %>
-  <%= f.input :date %>
+  <%= f.input :date, html5: true %>
   <%= f.submit %>
 <% end %>
+
+<br>
+<br>
+<%= link_to "Back to artist", artists_path %>
