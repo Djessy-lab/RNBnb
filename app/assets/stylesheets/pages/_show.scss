@@ -1,0 +1,136 @@
+body {
+  background-color: #000000;
+}
+
+.global-card {
+  display: flex;
+  background-color: #181818;
+  border-radius: 30px;
+  width: 70%;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.left-card {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  margin: 15px;
+}
+
+.right-card {
+  margin: 15px
+}
+
+.description {
+  display: flex;
+}
+
+.category-price {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.artist-photo {
+  border-radius: 30px;
+  margin-bottom: 20px;
+  margin-left: 5px;
+}
+
+.artist-photo img {
+  border-radius: 20px;
+}
+
+
+.artist-name {
+  font-size: 32px;
+  color: black;
+  background-color: #D5FF5D;
+  border-radius: 15px;
+  // border: 1px solid white;
+  width: 80%;
+  margin: 17px;
+}
+
+.barcode {
+  font-family: 'Libre Barcode 39', cursive;
+  font-size: 72px;
+  color: #D5FF5D;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.card-name {
+  background-color: #000000;
+  width: 95%;
+  border-radius: 20px;
+  height: 300px;
+  text-align: center;
+  position: relative;
+  border: 1px solid black;
+  box-shadow: 0 0 5px 2px #D5FF5D;
+
+}
+
+.description {
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 80px;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #B15CFF;
+  font-weight: bolder;
+  padding: 15px;
+  height: 150px;
+}
+
+.description p {
+  text-align: justify;
+  padding: auto;
+}
+
+.booking-form {
+color: white;
+display: flex;
+justify-content: flex-start;
+}
+
+.music {
+  color: white;
+  font-size: 24px;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 120px;
+}
+
+.card-index-text-cp {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  color: white;
+
+  p {
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  i {
+    color: #181818;
+    padding: 6px 8px;
+    background-color: #D5FF5D;
+    border-radius: 5px;
+    margin-left: 5px ;
+    font-size: 24px;
+  }
+}
