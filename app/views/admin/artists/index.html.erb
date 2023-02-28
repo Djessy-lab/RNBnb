@@ -1,0 +1,13 @@
+<h1>My Artists</h1>
+
+<% @artists.each do |artist| %>
+  <div class="artist-card">
+    <p><%= link_to artist.name, admin_artist_path(artist) %></p>
+    <p><%= artist.category %></p>
+    <p><%= artist.price %></p>
+    <p><%= artist.description %></p>
+  </div>
+<% end %>
+
+<h1>Create a new artist</h1>
+<%= render 'form', artist: @artist %>

@@ -1,0 +1,8 @@
+<%= simple_form_for [:admin, artist] do |f| %>
+  <%= f.input :name %>
+  <%= f.input :category, collection: [ "Latino", "Pop", "Rnb", "Ragga", "Rap"] %>
+  <%= f.input :price %>
+  <%= f.input :description %>
+  <%= f.input :photo, as: :file %>
+  <%= f.button :submit %>
+<% end %>
