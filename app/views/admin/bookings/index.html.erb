@@ -1,0 +1,8 @@
+<h1>All my bookings</h1>
+<hr>
+<% @bookings.each do |booking| %>
+  <p>Artist : <%= booking.artist.name %></p>
+  <p>Date : <%= booking.date %></p>
+  <p>Validated : <%= booking.validated %></p>
+<hr>
+<% end %>
