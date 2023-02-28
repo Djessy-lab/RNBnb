@@ -1,6 +1,6 @@
 <h2>BOOKINGS</h2>
 <% @bookings.each do |booking| %>
   <hr>
-  <%= booking.artist.name %> - <%= booking.artist.description %> - <%= booking.date %>
+  <%= booking.artist.name %> - <%= booking.artist.description %> - <%= booking.date %> - <%= link_to "Show this booking", booking_path(booking) %>
   <hr>
 <% end %>
