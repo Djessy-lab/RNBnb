@@ -1,0 +1,5 @@
+<h1><%= @artist.name %></H1>
+<p><%= @artist.category %></p>
+<p><%= @artist.price %></p>
+<p><%= @artist.description %></p>
+<%= cl_image_tag @artist.photo.key, height: 300, width: 400, crop: :fill %>
