@@ -4,5 +4,7 @@
   <p>Artist : <%= booking.artist.name %></p>
   <p>Date : <%= booking.date %></p>
   <p>Validated : <%= booking.validated %></p>
+  <%= link_to "Validate", validate_admin_booking_path(booking, decision: true), data: { turbo_method: :post } %>
+  <%= link_to "Decline", validate_admin_booking_path(booking, decision: false), data: { turbo_method: :post } %>
 <hr>
 <% end %>

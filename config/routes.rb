@@ -12,7 +12,10 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :artists
-    resources :bookings, only: %i[index show]
-    post "validate", to: "bookings#validate"
+    resources :bookings, only: %i[index show] do
+      member do
+        post "validate", to: "bookings#validate"
+      end
+    end
   end
 end
