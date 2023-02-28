@@ -1,5 +1,7 @@
 <h1><%= @artist.name %></H1>
 <p><%= @artist.category %></p>
-<p><%= @artist.price %></p>
+<p><%= @artist.price %>€</p>
 <p><%= @artist.description %></p>
 <%= cl_image_tag @artist.photo.key, height: 300, width: 400, crop: :fill %>
+<p><%= link_to "Update this artist", edit_admin_artist_path(@artist) %></p>
+<p><%= link_to "Delete this artist", admin_artist_path(@artist), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }  %></p>
