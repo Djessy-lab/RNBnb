@@ -1,0 +1,6 @@
+<%= simple_form_for [@artist, @booking] do |f| %>
+  <%= f.input :date, html5: true %>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to "Back to my booking", booking_path(@booking) %>

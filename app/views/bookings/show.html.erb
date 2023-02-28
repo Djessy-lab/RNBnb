@@ -5,5 +5,8 @@
 <%= @booking.artist.name %>
 
 <br>
+<%= link_to "Edit my booking", edit_booking_path(@booking) %>
+<br>
+<%= link_to 'Remove this booking', booking_path(@booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure ?"} %>
 <br>
 <%= link_to "Back to bookings", bookings_path %>
