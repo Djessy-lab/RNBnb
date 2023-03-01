@@ -1,9 +1,10 @@
-.container {
+.container-ticket{
   background-color: white;
   border-radius: 16px;
   height: 130px;
   padding-left: 0;
   padding-right: 0;
+  margin-top: 30px;
 }
 
 .name {
@@ -38,7 +39,7 @@
 
 
 .info-ticket {
-  padding: 25px 29px;
+  padding: 20px 29px;
   display: flex;
 }
 
