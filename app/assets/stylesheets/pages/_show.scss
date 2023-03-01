@@ -26,9 +26,7 @@ body {
   margin: 15px
 }
 
-.description {
-  display: flex;
-}
+
 
 .category-price {
   display: flex;
@@ -83,22 +81,23 @@ body {
 
 }
 
+
 .description {
   color: white;
-  margin-top: 20px;
   margin-bottom: 80px;
   border-radius: 10px;
   padding: 10px;
   background-color: #B15CFF;
   font-weight: bolder;
   padding: 15px;
-  height: 150px;
+  min-height: 150px;
 }
 
 .description p {
   text-align: justify;
   padding: auto;
 }
+
 
 .booking-form {
 color: white;
