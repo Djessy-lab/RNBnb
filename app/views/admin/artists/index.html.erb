@@ -1,11 +1,29 @@
-<% @artists.each do |artist| %>
-  <div class="artist-card">
-    <p><%= link_to artist.name, admin_artist_path(artist) %></p>
-    <p><%= artist.category %></p>
-    <p><%= artist.price %>€</p>
-    <p><%= artist.description %></p>
-  </div>
-<% end %>
+<div class="cards-index">
+  <% @artists.each do |artist| %>
+    <div class="card-index">
+      <div class="card-index-text">
+        <div>
+          <h1><%= artist.name %></h1>
+          <h2><%= artist.category %></h2>
+        </div>
+        <div class="card-index-text-cp">
+          <p><%= artist.price %>€</p>
+          <i class='fa-solid fa-euro-sign'></i>
+        </div>
+      </div>
+      <div class="bloc-photo-button">
+        <%= link_to admin_artist_path(artist) do %>
+        <div class="button-booking">
+            <p>VOIR DETAILS</p>
+        </div>
+      <% end %>
+        <div class="card-index-photo">
+          <%= cl_image_tag artist.photo.key, height: 300, width: 300, crop: :thumb %>
+        </div>
+      </div>
+    </div>
+  <% end %>
 
-<h1>Create a new artist</h1>
-<%= render 'form', artist: @artist %>
+  <h1>Create a new artist</h1>
+  <%= render 'form', artist: @artist %>
+</div>
