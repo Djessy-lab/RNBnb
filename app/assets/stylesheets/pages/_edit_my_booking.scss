@@ -1,0 +1,19 @@
+@import "../components/form";
+
+a {
+  color: #D5FF5D;
+  text-decoration: none;
+
+  &:hover {
+    color: #b15cff;
+  }
+}
+
+.container-edit-booking{
+  width: 600px;
+  margin: 20px auto;
+}
+
+.modif-resa {
+  margin-bottom: 20px;
+}
