@@ -32,9 +32,18 @@
   }
 }
 
+.nav-item-login a {
+  color: #D5FF5D;
+
+  &:hover {
+    color: #b15cff;
+  }
+}
+
 .dropdown-menu {
   border-radius: 5px;
   background-color: #181818;
+  margin: 5px;
 }
 
 .dropdown-item {
@@ -50,8 +59,17 @@
   color: #b15cff;
   font-family: 'Tilt Neon', cursive;
   font-size: 28px;
+
+  &:hover {
+    color: #D5FF5D;
+  }
 }
 
 .avatar {
   margin-left : 30px;
+  cursor: pointer;
+
+  &:hover {
+    border: 1px solid #b15cff;
+  }
 }
