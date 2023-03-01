@@ -1,0 +1,15 @@
+label {
+  color: white;
+}
+
+.btn {
+  border-radius: 15px;
+  background-color: #b15cff;
+  padding: 5px 18px;
+  font-weight: 700;
+
+  &:hover{
+    background-color: #D5FF5D;
+    color: black;
+  }
+}
