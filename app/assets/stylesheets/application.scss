@@ -11,12 +11,18 @@
 @import "components/index";
 @import "pages/index";
 @import "pages/show";
+
 @import "pages/index_bookings";
 
 // Google Font
 @import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Comfortaa:wght@300;700&display=swap');
 
+@import "pages/sign_in";
+
+
+
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Comfortaa', cursive;
+  font-weight: 300;
   background-color: black;
 }

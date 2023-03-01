@@ -3,6 +3,7 @@ body {
 }
 
 .global-card {
+  margin-top: 20px;
   display: flex;
   background-color: #181818;
   border-radius: 30px;
@@ -33,7 +34,7 @@ body {
   display: flex;
   justify-content: space-between;
   color: white;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 
 .artist-photo {
@@ -48,13 +49,14 @@ body {
 
 
 .artist-name {
-  font-size: 32px;
+  font-size: 30px;
   color: black;
   background-color: #D5FF5D;
   border-radius: 15px;
   // border: 1px solid white;
   width: 80%;
   margin: 17px;
+  font-family: 'Climate Crisis', cursive;
 }
 
 .barcode {
@@ -109,7 +111,7 @@ justify-content: flex-start;
   font-size: 24px;
   display: flex;
   justify-content: flex-end;
-  margin-top: 120px;
+  margin-top: 50px;
 }
 
 .card-index-text-cp {
@@ -132,5 +134,39 @@ justify-content: flex-start;
     border-radius: 5px;
     margin-left: 5px ;
     font-size: 24px;
+  }
+}
+
+.buttons-modifs {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.booking-informations {
+  text-align: left;
+  color: white;
+  max-height: 50px;
+}
+
+.btn-to-click {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  background-color: #b15cff;
+  padding: 5px 18px;
+
+
+  p {
+   margin: 5px 0;
+   font-size: 24px;
+  }
+
+  &:hover{
+    background-color: #D5FF5D;
+    color: black;
   }
 }
