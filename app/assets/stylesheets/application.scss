@@ -11,16 +11,15 @@
 @import "components/index";
 @import "pages/index";
 @import "pages/show";
-
+@import "pages/sign_in";
+@import "pages/sign_up";
+@import "pages/forgot_password";
+@import "pages/edit_artists";
+@import "pages/edit_my_booking";
 @import "pages/index_bookings";
 
 // Google Font
 @import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Comfortaa:wght@300;700&display=swap');
-
-@import "pages/sign_in";
-@import "pages/edit_my_booking";
-
-
 
 body {
   font-family: 'Comfortaa', cursive;
