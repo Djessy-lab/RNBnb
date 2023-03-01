@@ -1,2 +1,6 @@
-<h1>Update my artist</h1>
-<%= render 'form', artist: @artist %>
+<div class="container-edit-artists">
+  <h2>Modifier mon artiste</h2>
+  <%= render 'form', artist: @artist %>
+  <br>
+  <%= link_to "Retourner à mon artiste", admin_artist_path(@artist) %>
+</div>

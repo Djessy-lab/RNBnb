@@ -12,10 +12,13 @@
 @import "pages/index";
 @import "pages/show";
 @import "pages/sign_in";
+@import "pages/sign_up";
+@import "pages/forgot_password";
+@import "pages/edit_artists";
 
 
 // Google Font
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@300&family=Tilt+Neon&family=Climate+Crisis&family=Comfortaa:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Comfortaa:wght@300;700&display=swap');
 
 body {
   font-family: 'Comfortaa', cursive;
