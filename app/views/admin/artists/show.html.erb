@@ -3,45 +3,41 @@
     <div class="left-card">
       <div class="artist-photo">
         <%= cl_image_tag @artist.photo.key, height: 200, width: 190, crop: :fill %>
-      </div>
-          <div class="card-name">
-            <div class="artist-name">
-              <%= @artist.name %>
-              </div>
-              <p class="barcode">
-                RNBnb
-              </p>
-          </div>
         </div>
-        <div class="right-card">
-          <div class="description">
-          <p><%= @artist.description %></p>
+        <div class="card-name">
+          <div class="artist-name">
+            <%= @artist.name %>
           </div>
-            <div class="category-price">
-                <div class="artist-category">
-                  <strong><%= @artist.category %></strong>
-                </div>
-                  <strong><div class="artis-price"></strong>
-                  <div class="card-index-text-cp">
-                  <p><%= @artist.price %></p>
-                  <i class='fa-solid fa-euro-sign'></i>
-                </div>
-                </div>
-              </div>
-              <div class="music">
-                <i class="fa-solid fa-music fa-beat" style="--fa-animation-duration: 0.5s;"></i>
-                <i class="fa-solid fa-music fa-beat" style="--fa-animation-duration: 0.6s;"></i>
-                <i class="fa-solid fa-music fa-beat" style="--fa-animation-duration: 0.3s;"></i>
-                <i class="fa-solid fa-music fa-beat" style="--fa-animation-duration: 0.4s;"></i>
-                <i class="fa-solid fa-music fa-beat" style="--fa-animation-duration: 0.5s;"></i>
-                <i class="fa-solid fa-music fa-beat" style="--fa-animation-duration: 0.6s;"></i>
-              </div>
-            <div>
-              <p><%= link_to "Update this artist", edit_admin_artist_path(@artist) %></p>
-              <p><%= link_to "Delete this artist", admin_artist_path(@artist), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }  %></p>
-            </div>
+          <p class="barcode">
+            RNBnb
+          </p>
+        </div>
+    </div>
+    <div class="right-card">
+      <div class="description">
+        <p><%= @artist.description %></p>
       </div>
-
-  </div>
+      <div class="category-price">
+        <div class="artist-category">
+          <strong><%= @artist.category %></strong>
+        </div>
+        <div class="card-index-text-cp">
+          <p><%= @artist.price %></p>
+          <i class='fa-solid fa-euro-sign'></i>
+        </div>
+      </div>
+        <div class="music">
+          <i class="fa-solid fa-music fa-beat" style="--fa-animation-duration: 0.5s;"></i>
+          <i class="fa-solid fa-music fa-beat" style="--fa-animation-duration: 0.6s;"></i>
+          <i class="fa-solid fa-music fa-beat" style="--fa-animation-duration: 0.3s;"></i>
+          <i class="fa-solid fa-music fa-beat" style="--fa-animation-duration: 0.4s;"></i>
+          <i class="fa-solid fa-music fa-beat" style="--fa-animation-duration: 0.5s;"></i>
+          <i class="fa-solid fa-music fa-beat" style="--fa-animation-duration: 0.6s;"></i>
+        </div>
+        <div class = "buttons-my-artist">
+          <p><%= link_to "Modifier cet artist", edit_admin_artist_path(@artist), class: "btn-to-click" %></p>
+          <p><%= link_to "Supprimer cet artist", admin_artist_path(@artist), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn-to-click"  %></p>
+        </div>
+      </div>
   </div>
 </div>
