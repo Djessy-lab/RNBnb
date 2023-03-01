@@ -1,6 +1,13 @@
-<%= simple_form_for [@artist, @booking] do |f| %>
-  <%= f.input :date, html5: true %>
-  <%= f.submit %>
-<% end %>
 
-<%= link_to "Back to my booking", booking_path(@booking) %>
+<div class="container-edit-booking">
+  <h2>Modifier votre réservation pour <%= @booking.artist.name %></h2>
+    <div class="modif-resa">
+      <%= simple_form_for [@artist, @booking] do |f| %>
+        <%= f.input :date, html5: true %>
+        <%= f.button :submit, 'Valider' %>
+      <% end %>
+    </div>
+    <div class="retour-resa">
+     <%= link_to "Retourner à ma réservation", booking_path(@booking) %>
+    </div>
+</div>

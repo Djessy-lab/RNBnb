@@ -1,0 +1,85 @@
+.container-ticket{
+  background-color: white;
+  border-radius: 16px;
+  height: 130px;
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 30px;
+}
+
+.name {
+  font-family: 'Climate Crisis', cursive;
+  font-size: 2rem;
+  padding-left: 10px;
+}
+
+.name-barcode {
+  font-family: 'Libre Barcode 39', cursive;
+  font-size: 50px;
+  transform: rotate(90deg);
+  height: 100%;
+}
+
+.barcode-name {
+  border-left: 1px dashed black;
+  margin-left: 16px;
+  background-color: #D5FF5D;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+.date-ticket {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column-reverse;
+  transform: rotate(-90deg);
+  width: 250px;
+  text-align: center;
+}
+
+
+.info-ticket {
+  padding: 20px 29px;
+  display: flex;
+}
+
+
+.show-this {
+  font-size: 8px;
+  text-align: center;
+}
+
+.name-ticket {
+  border-right: 1px dashed black;
+  width: 320px;
+  padding-right: 25px;
+  background-color: #D5FF5D;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+
+.button-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: #b15cff;
+  padding: 5px 18px;
+  height: 50px;
+  width: 100px;
+
+  p {
+   margin: 5px 0;
+   font-size: 24px;
+  }
+
+  &:hover{
+    background-color: #D5FF5D;
+    color: black;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
