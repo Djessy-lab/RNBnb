@@ -1,6 +1,20 @@
 <h2>BOOKINGS</h2>
-<% @bookings.each do |booking| %>
-  <hr>
-  <%= booking.artist.name %> - <%= booking.artist.description %> - <%= booking.date %> - <%= link_to "Show this booking", booking_path(booking) %>
-  <hr>
-<% end %>
+
+<div class="container">
+  <div class="name-ticket">
+    <% @bookings.each do |booking| %>
+      <p class="name"><%= booking.artist.name %></p>
+      <p class="show-this">Show this ticket for your booking</p>
+  </div>
+  <div class="info-ticket">
+    <%= booking.artist.description %>
+  </div>
+  <div class="date-ticket">
+    <%= booking.date %>
+    <div class="button-details"><%= link_to "Détails", booking_path(booking) %></div>
+  </div>
+  <div class="barcode-name">
+    <p class="name-barcode">booking</p>
+  </div>
+  <% end %>
+</div>
