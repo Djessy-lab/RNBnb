@@ -33,7 +33,7 @@ body {
   display: flex;
   justify-content: space-between;
   color: white;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 
 .artist-photo {
@@ -109,7 +109,7 @@ justify-content: flex-start;
   font-size: 24px;
   display: flex;
   justify-content: flex-end;
-  margin-top: 120px;
+  margin-top: 50px;
 }
 
 .card-index-text-cp {
@@ -132,5 +132,39 @@ justify-content: flex-start;
     border-radius: 5px;
     margin-left: 5px ;
     font-size: 24px;
+  }
+}
+
+.buttons-modifs {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.booking-informations {
+  text-align: left;
+  color: white;
+  max-height: 50px;
+}
+
+.btn-to-click {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  background-color: #b15cff;
+  padding: 5px 18px;
+
+
+  p {
+   margin: 5px 0;
+   font-size: 24px;
+  }
+
+  &:hover{
+    background-color: #D5FF5D;
+    color: black;
   }
 }
