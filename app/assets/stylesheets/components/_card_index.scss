@@ -29,14 +29,15 @@
   h1 {
     border-radius: 20px;
     color: white;
-    font-family: 'Tilt Neon', cursive;
-    font-size: 32px;
+    font-family: 'Climate Crisis', cursive;
+    font-size: 150%;
   }
 
   h2 {
     line-height: 1;
-    font-family: 'Roboto', sans-serif;
-    font-size: 24px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 300;
+    font-size: 20px;
   }
 }
 
@@ -44,10 +45,11 @@
   display: inline-flex;
   flex-direction: row;
   justify-content: flex-start;
+  padding: 0;
   color: white;
 
   p {
-    font-size: 24px;
+    font-size: 100%;
     margin: 0;
     padding: 0;
   }
@@ -75,7 +77,8 @@
     color: white;
     padding: 0;
     margin: 0;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 700;
   }
 
   img {
@@ -96,7 +99,7 @@
 
   p {
    margin: 5px 0;
-   font-size: 24px;
+   font-size: 20px;
   }
 
   &:hover{
