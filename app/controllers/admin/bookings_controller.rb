@@ -11,7 +11,7 @@ class Admin::BookingsController < ApplicationController
     else
       @booking.update(validated: false)
     end
-    redirect_to admin_bookings_path
+    redirect_to admin_booking_path(@booking)
   end
 
   def show
