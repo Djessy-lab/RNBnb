@@ -2,13 +2,13 @@
   <div class="name-ticket">
     <% @bookings.each do |booking| %>
       <p class="name"><%= booking.artist.name %></p>
-      <p class="show-this">Show this ticket for your booking</p>
+      <p class="show-this">Le <%= booking.artist.name.first %> c'est le S</p>
   </div>
   <div class="info-ticket">
     <%= booking.artist.description %>
   </div>
   <div class="date-ticket">
-    <%= booking.date %>
+    <%= l(booking.date, format: :default) %>
     <div class="button-details"><%= link_to "Détails", admin_booking_path(booking) %></div>
   </div>
   <div class="barcode-name">

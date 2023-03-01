@@ -56,6 +56,9 @@
   background-color: #D5FF5D;
   border-top-left-radius: 16px;
   border-bottom-left-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .button-details {
