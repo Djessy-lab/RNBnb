@@ -1,10 +1,18 @@
-<h1>All my bookings</h1>
-<hr>
-<% @bookings.each do |booking| %>
-  <p>Artist : <%= booking.artist.name %></p>
-  <p>Date : <%= booking.date %></p>
-  <p>Validated : <%= booking.validated %></p>
-  <%= link_to "Validate", validate_admin_booking_path(booking, decision: true), data: { turbo_method: :post } %>
-  <%= link_to "Decline", validate_admin_booking_path(booking, decision: false), data: { turbo_method: :post } %>
-<hr>
-<% end %>
+<div class="container container-ticket">
+  <div class="name-ticket">
+    <% @bookings.each do |booking| %>
+      <p class="name"><%= booking.artist.name %></p>
+      <p class="show-this">Show this ticket for your booking</p>
+  </div>
+  <div class="info-ticket">
+    <%= booking.artist.description %>
+  </div>
+  <div class="date-ticket">
+    <%= booking.date %>
+    <div class="button-details"><%= link_to "Détails", admin_booking_path(booking) %></div>
+  </div>
+  <div class="barcode-name">
+    <p class="name-barcode">booking</p>
+  </div>
+  <% end %>
+</div>
