@@ -1,18 +1,18 @@
-<div class="container container-ticket">
-  <div class="name-ticket">
-    <% @bookings.each do |booking| %>
-      <p class="name"><%= booking.artist.name %></p>
-      <p class="show-this">Le <%= booking.artist.name.first %> c'est le S</p>
+<% @bookings.each do |booking| %>
+  <div class="container container-ticket">
+    <div class="name-ticket">
+        <p class="name"><%= booking.artist.name %></p>
+        <p class="show-this">Le <%= booking.artist.name.first %> c'est le S</p>
+    </div>
+    <div class="info-ticket">
+      <%= booking.artist.description %>
+    </div>
+    <div class="date-ticket">
+      <%= l(booking.date, format: :default) %>
+      <div class="button-details"><%= link_to "Détails", admin_booking_path(booking) %></div>
+    </div>
+    <div class="barcode-name">
+      <p class="name-barcode">booking</p>
+    </div>
   </div>
-  <div class="info-ticket">
-    <%= booking.artist.description %>
-  </div>
-  <div class="date-ticket">
-    <%= l(booking.date, format: :default) %>
-    <div class="button-details"><%= link_to "Détails", admin_booking_path(booking) %></div>
-  </div>
-  <div class="barcode-name">
-    <p class="name-barcode">booking</p>
-  </div>
-  <% end %>
-</div>
+<% end %>
