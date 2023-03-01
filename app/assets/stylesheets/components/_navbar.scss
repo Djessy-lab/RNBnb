@@ -26,6 +26,7 @@
   margin: 0 5px;
   display: inline;
   color: #D5FF5D;
+  font-weight: 700;
 
   &:hover {
     color: #b15cff;
@@ -48,6 +49,7 @@
 
 .dropdown-item {
   color: #D5FF5D;
+  font-weight: 700;
 
   &:hover {
     color: #b15cff;
@@ -57,9 +59,9 @@
 
 .logo {
   color: #b15cff;
-  font-family: 'Tilt Neon', cursive;
-  font-size: 28px;
-
+  font-family: 'Climate Crisis', cursive;
+  font-size: 24px;
+  
   &:hover {
     color: #D5FF5D;
   }
