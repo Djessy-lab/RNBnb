@@ -49,7 +49,7 @@ body {
 
 
 .artist-name {
-  font-size: 30px;
+  font-size: 22px;
   color: black;
   background-color: #D5FF5D;
   border-radius: 15px;
@@ -169,4 +169,10 @@ justify-content: flex-start;
     background-color: #D5FF5D;
     color: black;
   }
+}
+
+.buttons-my-artist {
+  margin-top: 110px;
+  display: flex;
+  justify-content: space-between;
 }

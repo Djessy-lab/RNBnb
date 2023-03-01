@@ -29,7 +29,7 @@
         <div class="booking-form">
           <%= simple_form_for [@artist, @booking] do |f| %>
           <%= f.input :date, html5: true %>
-          <%= f.submit class: 'btn btn-outline-light' %>
+          <%= f.button :submit, "Demande de réservation", class: 'btn btn-outline-light' %>
           <% end %>
         </div>
         <div class="music">
