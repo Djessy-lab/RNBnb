@@ -10,3 +10,32 @@ h2 {
   width: 800px;
   margin: 0 auto;
 }
+
+.flexeur {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.flexeur .form-control {
+  width: 600px;
+  border-radius: 20px;
+  opacity: .9;
+  margin-right: 10px;
+}
+
+.button-search {
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  color: white;
+  font-size: 16px;
+  font-family: 'Comfortaa', cursive;
+  background-color: #b15cff;
+}
+
+.button-search:hover {
+  background-color: #D5FF5D;
+  color: black;
+  transition: all .4s;
+}
