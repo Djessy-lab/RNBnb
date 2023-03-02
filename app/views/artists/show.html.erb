@@ -19,11 +19,13 @@
         <div class="description">
           <p><%= @artist.description %></p>
         </div>
+        <% if @artist.reviews.first == nil %>
+        <% else %>
         <div class="card-review-rating">
           <p><%= @artist.reviews.first.rating.to_i %>/5
           <i class="fa-solid fa-star"></i>
         </div>
-        
+        <% end %>
         <div class="category-price">
           <div class="artist-category">
             <strong><%= @artist.category %></strong>
