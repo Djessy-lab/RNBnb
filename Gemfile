@@ -7,6 +7,8 @@ gem "devise"
 
 gem "cloudinary"
 
+gem 'rspotify'
+
 gem "elasticsearch", "< 7.14" # to use a supported version of the Elasticsearch Ruby client
 gem "searchkick", "~> 4.0"
 

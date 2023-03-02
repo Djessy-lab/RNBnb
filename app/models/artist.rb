@@ -1,3 +1,5 @@
+require 'rspotify'
+
 class Artist < ApplicationRecord
   searchkick suggest: [:name]
   belongs_to :user
