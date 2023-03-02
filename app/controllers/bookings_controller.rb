@@ -1,8 +1,10 @@
 class BookingsController < ApplicationController
-  before_action :set_bookings, only: %i[show edit update destroy]
+  before_action :set_bookings, only: %i[show update destroy]
 
   def index
     @bookings = Booking.where(user: current_user)
+    @past_bookings = @bookings.select { |booking| booking.date < Date.today }
+    @future_bookings = @bookings.select { |booking| booking.date >= Date.today }
   end
 
   def show
@@ -20,9 +22,6 @@ class BookingsController < ApplicationController
     else
       render "artists/show", status: :unprocessable_entity
     end
-  end
-
-  def edit
   end
 
   def update

@@ -1,4 +1,5 @@
-<% @bookings.each do |booking| %>
+<%= render 'shared/navbar' %>
+<% @future_bookings.each do |booking| %>
   <div class="container container-ticket">
     <% if booking.validated == "approved"%>
       <div class="name-ticket background-green">
@@ -24,6 +25,29 @@
     <% else %>
       <div class="barcode-name background-orange" >
     <% end %>
+      <p class="name-barcode">booking</p>
+    </div>
+  </div>
+<% end %>
+<div class="past-reservation">
+  <p>------------------------</p>
+  <p>Réservations passées</p>
+  <p>------------------------</p>
+</div>
+<% @past_bookings.each do |booking| %>
+  <div class="container container-ticket opacity">
+    <div class="name-ticket background-grey">
+      <p class="name"><%= booking.artist.name %></p>
+      <p class="show-this">Le <%= booking.artist.name.first %> c'est le S</p>
+    </div>
+    <div class="info-ticket">
+      <%= booking.artist.description %>
+    </div>
+    <div class="date-ticket">
+      <%= l(booking.date, format: :default) %>
+      <div class="button-details"><%= link_to "Détails", booking_path(booking) %></div>
+    </div>
+    <div class="barcode-name background-grey" >
       <p class="name-barcode">booking</p>
     </div>
   </div>

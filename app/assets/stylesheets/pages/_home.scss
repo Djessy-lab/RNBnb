@@ -1,1 +1,54 @@
-// Specific CSS for your home-page
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  height: 80vh;
+}
+
+.banner h1 {
+  margin: 0;
+  color: #D5FF5D;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 64px;
+  font-weight: bold;
+  font-family: 'Climate Crisis', cursive;
+
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.p-contain {
+  display: flex;
+  flex-direction: column;
+}
+
+.button-log {
+  background-color: #B15CFF;
+  height: 30px;
+  width: 150px;
+  padding-top: 2px;
+  border-radius: 30px;
+  text-align: center;
+  color: white;
+}
+
+.button-log a {
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+
+.button-log:hover {
+  background-color: #D5FF5D;
+  color: black;
+}
+
+.button-log a:hover {
+  color: black;
+  text-decoration: none;
+}

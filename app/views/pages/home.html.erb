@@ -1,2 +1,41 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://media.istockphoto.com/id/1217453390/fr/photo/joueur-de-bande-vintage-boombox.jpg?s=612x612&w=0&k=20&c=JWnW6p46KqkwVqTh1JyASdUDUUi2j5hE632yGb_THRc=);">
+  <div class="container">
+    <h1>RNBnb</h1>
+    <div class="p-contain">
+      <p>Ils vous ont fait rêver pendant votre adolescence ?</p>
+      <p>Louez vos artistes has-been préférés !</p>
+    </div>
+    <div class="button-log"><%= link_to "Se connecter", new_user_session_path %></div>
+  </div>
+</div>
+</div>
+<div class="cards-index">
+  <% @artists.each do |artist| %>
+  <div class="card-index">
+    <div class="card-index-text">
+        <div>
+          <h1><%= artist.name %></h1>
+          <h2><%= artist.category %></h2>
+        </div>
+        <% if artist.reviews.first == nil %>
+        <% else %>
+        <p><%= artist.reviews.first.content %></p>
+        <% end %>
+        <div class="card-index-text-cp">
+          <p><%= artist.price %></p>
+          <i class='fa-solid fa-euro-sign'></i>
+        </div>
+    </div>
+    <div class="bloc-photo-button">
+      <%= link_to artist_path(artist) do %>
+        <div class="button-booking">
+            <p><i class='fa-solid fa-microphone-lines fa-flip'></i> RESERVEZ MOI</p>
+        </div>
+      <% end %>
+      <div class="card-index-photo">
+        <%= cl_image_tag artist.photo.key, height: 300, width: 300, crop: :thumb %>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>

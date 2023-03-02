@@ -3,6 +3,8 @@ class Admin::BookingsController < ApplicationController
 
   def index
     @bookings = Booking.joins(:artist).where(artist: { user: current_user })
+    @past_bookings = @bookings.select { |booking| booking.date < Date.today }
+    @future_bookings = @bookings.select { |booking| booking.date >= Date.today }
   end
 
   def validate
