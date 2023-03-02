@@ -1,0 +1,55 @@
+@import "../components/form";
+
+a {
+  color: #D5FF5D;
+  text-decoration: none;
+
+  &:hover {
+    color: #b15cff;
+  }
+}
+
+.container-edit-booking{
+  width: 400px;
+  margin: 20px auto;
+}
+
+.modif-resa {
+  margin-bottom: 20px;
+}
+
+.modal-backdrop {
+  background-color: lightslategray;
+}
+
+.modal-content {
+  background: #181818;
+}
+
+.input-submit-modifs
+ {
+  color: white;
+}
+
+.btn-to-click-green {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  background-color: #D5FF5D;
+  padding: 5px 18px;
+  border: none;
+}
+
+.modal-nouvel-artist {
+position: absolute;
+margin-top: 15px;
+margin-left: 1130px;
+}
+
+.index-my-artists {
+  position: relative;
+  margin-top: 30px;
+}
