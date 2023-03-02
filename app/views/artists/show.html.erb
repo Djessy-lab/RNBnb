@@ -1,50 +1,69 @@
- <div class="container">
-  <div class="global-card">
-    <div class="left-card">
-      <div class="artist-photo">
-        <%= cl_image_tag @artist.photo.key, height: 200, width: 190, crop: :fill %>
-        </div>
-        <div class="card-name">
-          <div class="artist-name">
-            <%= @artist.name %>
+ <div class="container-global">
+  <div class="container">
+    <div class="global-card">
+      <div class="left-card">
+        <div class="artist-photo">
+          <%= cl_image_tag @artist.photo.key, height: 200, width: 190, crop: :fill %>
           </div>
-          <p class="barcode">
-            RNBnb
-          </p>
-        </div>
-    </div>
-    <div class="right-card">
-      <div class="description">
-        <p><%= @artist.description %></p>
+          <div class="card-name">
+            <div class="artist-name">
+              <%= @artist.name %>
+            </div>
+            <p class="barcode">
+              RNBnb
+            </p>
+          </div>
       </div>
-      <div class="category-price">
-        <div class="artist-category">
-          <strong><%= @artist.category %></strong>
+      <div class="right-card">
+        <div class="description">
+          <p><%= @artist.description %></p>
         </div>
+        <div class="card-review-rating">
+          <p><%= @artist.reviews.first.rating.to_i %>/5
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <div class="category-price">
+          <div class="artist-category">
+            <strong><%= @artist.category %></strong>
+          </div>
 
-        <div class="card-index-text-cp">
-          <p><%= @artist.price %></p>
-          <i class='fa-solid fa-euro-sign'></i>
+          <div class="card-index-text-cp">
+            <p><%= @artist.price %></p>
+            <i class='fa-solid fa-euro-sign'></i>
+          </div>
         </div>
-      </div>
-        <div class="booking-form">
-          <%= simple_form_for [@artist, @booking] do |f| %>
-          <%= f.input :date, html5: true %>
-          <%= f.button :submit, "Demande de réservation", class: 'btn btn-outline-light' %>
-          <% end %>
-        </div>
-        <div class="music">
-          <i class="fa-solid fa-music fa-beat" style="--fa-animation-duration: 0.5s;"></i>
-          <i class="fa-solid fa-music fa-beat" style="--fa-animation-duration: 0.6s;"></i>
-          <i class="fa-solid fa-music fa-beat" style="--fa-animation-duration: 0.3s;"></i>
-          <i class="fa-solid fa-music fa-beat" style="--fa-animation-duration: 0.4s;"></i>
-          <i class="fa-solid fa-music fa-beat" style="--fa-animation-duration: 0.5s;"></i>
-          <i class="fa-solid fa-music fa-beat" style="--fa-animation-duration: 0.6s;"></i>
-        </div>
-        <div>
-        </div>
-        <p><%= @artist.reviews.first.content %></p>
-        <p><%= @artist.reviews.first.rating %></p>
-      </div>
+          <div class="booking-form">
+            <%= simple_form_for [@artist, @booking] do |f| %>
+            <%= f.input :date, html5: true %>
+            <%= f.button :submit, "Demande de réservation", class: 'btn btn-outline-light' %>
+            <% end %>
+          </div>
+          <div class="music">
+            <i class="fa-solid fa-music fa-beat" style="--fa-animation-duration: 0.5s;"></i>
+            <i class="fa-solid fa-music fa-beat" style="--fa-animation-duration: 0.6s;"></i>
+            <i class="fa-solid fa-music fa-beat" style="--fa-animation-duration: 0.3s;"></i>
+            <i class="fa-solid fa-music fa-beat" style="--fa-animation-duration: 0.4s;"></i>
+            <i class="fa-solid fa-music fa-beat" style="--fa-animation-duration: 0.5s;"></i>
+            <i class="fa-solid fa-music fa-beat" style="--fa-animation-duration: 0.6s;"></i>
+          </div>
+    </div>
   </div>
-</div>
+ </div>
+ <div class="container">
+    <div class="reviews">
+          <h3>Commentaires</h3>
+          <div class="reviews-content">
+              <% if @artist.reviews.first == nil %>
+                <p>Pas de commentaires</p>
+              <% else %>
+                <% @artist.reviews.each do |review| %>
+              <div class="review-content">
+                <p><%= review.user.first_name %> :</p>
+                <p><%= review.content %></p>
+              </div>
+                <p>------------</p>
+              <% end %>
+            <% end %>
+          </div>
+    </div>
+ </div>

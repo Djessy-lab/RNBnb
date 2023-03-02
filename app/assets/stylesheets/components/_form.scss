@@ -14,3 +14,20 @@ label {
     color: black;
   }
 }
+
+.review{
+  margin: 20px 0 0 20px;
+  display: flex;
+  background-color: #181818;
+  border-radius: 30px;
+  width: 30%;
+  padding: 20px;
+  justify-content: center;
+  height: 55%;
+
+  input:last-child {
+    margin-top: 10px;
+    border: none;
+  }
+
+}

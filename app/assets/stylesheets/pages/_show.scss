@@ -2,17 +2,22 @@ body {
   background-color: #000000;
 }
 
+.container-global {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
 .global-card {
   margin-top: 20px;
   display: flex;
   background-color: #181818;
   border-radius: 30px;
   width: 70%;
-}
-
-.container {
-  display: flex;
-  justify-content: space-around;
 }
 
 .left-card {
@@ -25,8 +30,6 @@ body {
 .right-card {
   margin: 15px
 }
-
-
 
 .category-price {
   display: flex;
@@ -44,7 +47,6 @@ body {
 .artist-photo img {
   border-radius: 20px;
 }
-
 
 .artist-name {
   font-size: 22px;
@@ -177,4 +179,26 @@ justify-content: flex-start;
   margin-top: 110px;
   display: flex;
   justify-content: space-between;
+}
+
+.reviews {
+  color: white;
+  margin-left: 10px;
+  background-color: #181818;
+  border-radius: 30px;
+  margin-top: 20px;
+  width: 70%;
+  padding: 20px;
+}
+
+.reviews-content {
+  margin-top: 20px;
+}
+
+.review-content {
+  display: flex;
+
+  p {
+    padding-left: 10px;
+  }
 }

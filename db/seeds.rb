@@ -52,7 +52,7 @@ florida = Artist.new(name: "Florida", category: "Rnb", price: 65000, description
 florida.photo.attach(io: florida_photo, filename: "florida.png", content_type: "image/png")
 florida.save
 
-tragedie_photo = URI.open("https://www.warehouse-nantes.fr/media/cache/square_1000/images/artist_image/5c9e295459ebd587124677.jpg")
+tragedie_photo = URI.open("https://static1.purepeople.com/articles/9/34/41/89/@/4920560-le-groupe-tragedie-lors-du-concert-au-pl-624x600-3.jpg")
 tragedie = Artist.new(name: "Tragedie", category: "Rnb", price: 5000, description: "Tragédie est un groupe de RnB et de hip-hop français, originaire de Nantes, en Loire-Atlantique fondé par Daniel Guiro et Thierry Rakotomanga. Le groupe se popularise en 2003 avec le single Hey oh. Il se dissout en 2005 et se reforme une décennie plus tard en 2015 aux côtés d’Az sous le nom Tragédie 2.0.", user_id: timbaland.id)
 tragedie.photo.attach(io: tragedie_photo, filename: "tragedie.png", content_type: "image/png")
 tragedie.save
