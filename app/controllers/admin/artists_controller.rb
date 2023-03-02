@@ -1,5 +1,5 @@
 class Admin::ArtistsController < ApplicationController
-  before_action :set_artist, only: %i[show edit update destroy]
+  before_action :set_artist, only: %i[show update destroy]
   def index
     @artists = current_user.artists
     @user = current_user
@@ -10,6 +10,7 @@ class Admin::ArtistsController < ApplicationController
   end
 
   def create
+    @artists = current_user.artists
     @artist = Artist.new(artist_params)
     @artist.user = current_user
     if @artist.save
@@ -17,9 +18,6 @@ class Admin::ArtistsController < ApplicationController
     else
       render :index, status: :unprocessable_entity
     end
-  end
-
-  def edit
   end
 
   def update
