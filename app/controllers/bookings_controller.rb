@@ -2,7 +2,6 @@ class BookingsController < ApplicationController
   before_action :set_bookings, only: %i[show edit update destroy]
 
   def index
-    @bookings = Booking.all
     @bookings = Booking.where(user: current_user)
   end
 

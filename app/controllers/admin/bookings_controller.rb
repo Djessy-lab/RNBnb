@@ -7,9 +7,9 @@ class Admin::BookingsController < ApplicationController
 
   def validate
     if params[:decision] == 'true'
-      @booking.update(validated: true)
+      @booking.update(validated: "approved")
     else
-      @booking.update(validated: false)
+      @booking.update(validated: "declined")
     end
     redirect_to admin_booking_path(@booking)
   end
