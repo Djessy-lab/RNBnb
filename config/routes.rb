@@ -7,10 +7,10 @@ Rails.application.routes.draw do
     resources :bookings, only: %i[create]
     resources :reviews, only: %i[new create]
   end
-  resources :bookings, only: %i[index show edit update destroy]
+  resources :bookings, only: %i[index show update destroy]
 
   namespace :admin do
-    resources :artists
+    resources :artists, only: %i[index show create update destroy]
     resources :bookings, only: %i[index show] do
       member do
         post "validate", to: "bookings#validate"

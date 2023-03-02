@@ -64,7 +64,7 @@
               <div class="modal-body">
                 <div class="container-edit-booking">
                   <div class="modif-resa">
-                    <%= simple_form_for [@artist, @booking] do |f| %>
+                    <%= simple_form_for @booking do |f| %>
                       <%= f.input :date, html5: true %>
                       <%= f.button :submit, 'Valider', class:"input-submit-modifs" %>
                     <% end %>
