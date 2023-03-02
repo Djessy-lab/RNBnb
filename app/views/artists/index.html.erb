@@ -1,3 +1,13 @@
+<div class="flexeur">
+  <%= form_with url: artists_path, method: :get, class: "d-flex" do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Chercher un artiste"
+    %>
+    <%= submit_tag "Rechercher", class: "button-search" %>
+  <% end %>
+</div>
 <div class="cards-index">
   <% @artists.each do |artist| %>
   <div class="card-index">

@@ -7,6 +7,9 @@ gem "devise"
 
 gem "cloudinary"
 
+gem "elasticsearch", "< 7.14" # to use a supported version of the Elasticsearch Ruby client
+gem "searchkick", "~> 4.0"
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4", ">= 7.0.4.2"
 
