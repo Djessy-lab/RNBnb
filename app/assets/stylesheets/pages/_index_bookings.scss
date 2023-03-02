@@ -11,6 +11,7 @@
   font-family: 'Climate Crisis', cursive;
   font-size: 2rem;
   padding-left: 10px;
+  text-align: center;
 }
 
 .name-barcode {
@@ -33,7 +34,7 @@
   justify-content: space-around;
   flex-direction: column-reverse;
   transform: rotate(-90deg);
-  width: 250px;
+  width: 100px;
   text-align: center;
 }
 
@@ -70,8 +71,8 @@
   border-radius: 10px;
   background-color: #b15cff;
   padding: 5px 18px;
-  height: 50px;
-  width: 100px;
+  min-height: 50px;
+  width: 100%;
 
   p {
    margin: 5px 0;
