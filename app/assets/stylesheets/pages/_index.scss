@@ -39,3 +39,28 @@ h2 {
   color: black;
   transition: all .4s;
 }
+
+.card-review {
+  height: 60px;
+  text-overflow: ellipsis;
+}
+
+.card-review-rating {
+display: flex;
+flex-direction: row;
+
+p {
+  margin-right: 5px;
+  font-weight: bold;
+  color: white;
+}
+
+i {
+  color: #D5FF5D;
+}
+}
+
+.card-review-commentaire {
+  margin-bottom: 20px;
+  max-height: 150px;
+}
