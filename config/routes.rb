@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'reviews/new'
-  devise_for :users
+  devise_for :users, controllers: { sessions: 'users/sessions' }
   root to: "pages#home"
 
   resources :artists, only: %i[index show] do
