@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'reviews/new'
   devise_for :users
-  root to: "artists#index"
+  root to: "pages#home"
 
   resources :artists, only: %i[index show] do
     resources :bookings, only: %i[create]

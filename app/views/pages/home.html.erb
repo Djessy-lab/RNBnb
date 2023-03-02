@@ -1,0 +1,38 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+  <div class="container">
+    <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
+    <p>Change your life and learn to code at one of our campuses around the world.</p>
+    <%= link_to "Se connecter", new_user_session_path %>
+  </div>
+</div>
+</div>
+<div class="cards-index">
+  <% @artists.each do |artist| %>
+  <div class="card-index">
+    <div class="card-index-text">
+        <div>
+          <h1><%= artist.name %></h1>
+          <h2><%= artist.category %></h2>
+        </div>
+        <% if artist.reviews.first == nil %>
+        <% else %>
+        <p><%= artist.reviews.first.content %></p>
+        <% end %>
+        <div class="card-index-text-cp">
+          <p><%= artist.price %></p>
+          <i class='fa-solid fa-euro-sign'></i>
+        </div>
+    </div>
+    <div class="bloc-photo-button">
+      <%= link_to artist_path(artist) do %>
+        <div class="button-booking">
+            <p><i class='fa-solid fa-microphone-lines fa-flip'></i> RESERVEZ MOI</p>
+        </div>
+      <% end %>
+      <div class="card-index-photo">
+        <%= cl_image_tag artist.photo.key, height: 300, width: 300, crop: :thumb %>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
