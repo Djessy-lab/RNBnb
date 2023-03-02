@@ -1,30 +1,52 @@
-<div class="cards-index">
-  <% @artists.each do |artist| %>
-    <div class="card-index">
-      <div class="card-index-text">
-        <div>
-          <h1><%= artist.name %></h1>
-          <h2><%= artist.category %></h2>
+<!-- Button trigger modal -->
+<div class="modal-nouvel-artist">
+  <button type="button" class="btn btn-to-click" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Ajouter un nouvel artiste
+  </button>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="exampleModalLabel">Ajouter les informations du nouvel artist</h2>
+          <button class="btn-to-click-green" data-bs-dismiss="modal" aria-label="Close"><strong>X</strong></button>
         </div>
-        <div class="card-index-text-cp">
-          <p><%= artist.price %></p>
-          <i class='fa-solid fa-euro-sign'></i>
+        <div class="modal-body">
+          <div class="container-edit-booking">
+            <div class="modif-resa">
+                <%= render 'form', artist: @artist %>
+            </div>
         </div>
-      </div>
-      <div class="bloc-photo-button">
-        <%= link_to admin_artist_path(artist) do %>
-        <div class="button-booking">
-            <p>VOIR DETAILS</p>
-        </div>
-      <% end %>
-        <div class="card-index-photo">
-          <%= cl_image_tag artist.photo.key, height: 300, width: 300, crop: :thumb %>
         </div>
       </div>
     </div>
-  <% end %>
+  </div>
 </div>
-<div class="container-form">
-  <h2>Rajouter un nouvel artiste</h2>
-  <%= render 'form', artist: @artist %>
+<div class="index-my-artists">
+  <div class="cards-index">
+    <% @artists.each do |artist| %>
+      <div class="card-index">
+        <div class="card-index-text">
+          <div>
+            <h1><%= artist.name %></h1>
+            <h2><%= artist.category %></h2>
+          </div>
+          <div class="card-index-text-cp">
+            <p><%= artist.price %></p>
+            <i class='fa-solid fa-euro-sign'></i>
+          </div>
+        </div>
+        <div class="bloc-photo-button">
+          <%= link_to admin_artist_path(artist) do %>
+          <div class="button-booking">
+              <p>VOIR DETAILS</p>
+          </div>
+        <% end %>
+          <div class="card-index-photo">
+            <%= cl_image_tag artist.photo.key, height: 300, width: 300, crop: :thumb %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
