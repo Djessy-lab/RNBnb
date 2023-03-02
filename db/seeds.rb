@@ -118,7 +118,7 @@ aventura.photo.attach(io: aventura_photo, filename: "aventura.png", content_type
 aventura.save
 
 puts "Creating bookings..."
-Booking.create(user_id: timbaland.id, artist_id: florida.id, date: (Date.today + 45), validated: true)
-Booking.create(user_id: timbaland.id, artist_id: britney_spears.id, date: (Date.today + 22), validated: true)
+Booking.create(user_id: timbaland.id, artist_id: florida.id, date: (Date.today + 45))
+Booking.create(user_id: timbaland.id, artist_id: britney_spears.id, date: (Date.today + 22))
 
 puts "Finished!"
