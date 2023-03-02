@@ -11,6 +11,7 @@
   font-family: 'Climate Crisis', cursive;
   font-size: 2rem;
   padding-left: 10px;
+  text-align: center;
 }
 
 .name-barcode {
@@ -43,7 +44,7 @@
   justify-content: space-around;
   flex-direction: column-reverse;
   transform: rotate(-90deg);
-  width: 250px;
+  width: 100px;
   text-align: center;
 }
 
@@ -52,6 +53,7 @@
   padding: 20px 29px;
   display: flex;
   overflow: scroll;
+  min-height: 120px;
 }
 
 .show-this {
@@ -78,9 +80,8 @@
   border-radius: 10px;
   background-color: #b15cff;
   padding: 5px 18px;
-  height: 50px;
-  width: 100px;
-  z-index: 10;
+  min-height: 50px;
+  width: 100%;
 
   p {
    margin: 5px 0;
@@ -90,6 +91,7 @@
   &:hover{
     background-color: #D5FF5D;
     color: black;
+    transition: all .4s;
   }
 
   a {

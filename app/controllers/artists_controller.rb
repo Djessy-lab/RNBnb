@@ -3,7 +3,11 @@ class ArtistsController < ApplicationController
   before_action :set_artists, only: [:show]
 
   def index
-    @artists = Artist.all
+    if params[:query].present?
+      @artists = Artist.search(params[:query], fields: [:name], suggest: true)
+    else
+      @artists = Artist.all
+    end
   end
 
   def show

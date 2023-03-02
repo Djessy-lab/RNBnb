@@ -49,7 +49,31 @@
         <i class="fa-solid fa-music fa-beat" style="--fa-animation-duration: 0.6s;"></i>
       </div>
       <div class = "buttons-modifs">
-        <%= link_to "Modifier ma réservation", edit_booking_path(@booking), class: "btn-to-click" %>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-to-click" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Modifier ma réservation
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 class="modal-title fs-5" id="exampleModalLabel">Modifier votre réservation pour <%= @booking.artist.name %></h2>
+                <button class="btn-to-click-green" data-bs-dismiss="modal" aria-label="Close"><strong>X</strong></button>
+              </div>
+              <div class="modal-body">
+                <div class="container-edit-booking">
+                  <div class="modif-resa">
+                    <%= simple_form_for [@artist, @booking] do |f| %>
+                      <%= f.input :date, html5: true %>
+                      <%= f.button :submit, 'Valider', class:"input-submit-modifs" %>
+                    <% end %>
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <%= link_to 'Annuler ma réservation', booking_path(@booking), data: {turbo_method: :delete, turbo_confirm: "Etes vous sur ?"}, class: "btn-to-click" %>
       </div>
     </div>

@@ -1,4 +1,5 @@
 class Artist < ApplicationRecord
+  searchkick suggest: [:name]
   belongs_to :user
   has_many :bookings, dependent: :destroy
 
