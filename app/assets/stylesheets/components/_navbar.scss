@@ -4,6 +4,7 @@
   position: sticky;
   z-index: 2;
   top: 0;
+  border-bottom: 1px solid #b15cff;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -61,7 +62,7 @@
   color: #b15cff;
   font-family: 'Climate Crisis', cursive;
   font-size: 24px;
-  
+
   &:hover {
     color: #D5FF5D;
   }
