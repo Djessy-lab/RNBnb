@@ -6,6 +6,10 @@
           <h1><%= artist.name %></h1>
           <h2><%= artist.category %></h2>
         </div>
+        <% if artist.reviews.first == nil %>
+        <% else %>
+        <p><%= artist.reviews.first.content %></p>
+        <% end %>
         <div class="card-index-text-cp">
           <p><%= artist.price %></p>
           <i class='fa-solid fa-euro-sign'></i>

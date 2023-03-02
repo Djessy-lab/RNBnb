@@ -7,6 +7,8 @@ class BookingsController < ApplicationController
   end
 
   def show
+    @artist = Artist.find(@booking.artist_id)
+    @review = Review.new
   end
 
   def create
