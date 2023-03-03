@@ -15,6 +15,8 @@ class ArtistsController < ApplicationController
   def show
     @booking = Booking.new
     spotify_player_for(@artist)
+    @reviews = @artist.reviews
+    @average_rating = @reviews.average(:rating)
   end
 
 

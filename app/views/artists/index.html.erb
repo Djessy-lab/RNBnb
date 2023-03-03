@@ -26,7 +26,7 @@
               <p><%= artist.reviews.first.content %></p>
             </div>
             <div class="card-review-rating">
-              <p><%= artist.reviews.first.rating.to_i %>/5
+              <p><%= artist.reviews.average(:rating) %>/5
               <i class="fa-solid fa-star"></i>
             </div>
             </p>
