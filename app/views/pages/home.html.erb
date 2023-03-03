@@ -18,9 +18,21 @@
           <h2><%= artist.category %></h2>
         </div>
         <% if artist.reviews.first == nil %>
+        <p></p>
         <% else %>
-        <p><%= artist.reviews.first.content %></p>
+        <div class="card-review">
+            <div class="card-review-commentaire">
+              <p><%= artist.reviews.first.user.first_name %> :</p>
+              <p><%= artist.reviews.first.content %></p>
+            </div>
+            <div class="card-review-rating">
+              <p><%= artist.reviews.average(:rating) %>/5
+              <i class="fa-solid fa-star"></i>
+            </div>
+            </p>
+          </div>
         <% end %>
+
         <div class="card-index-text-cp">
           <p><%= artist.price %></p>
           <i class='fa-solid fa-euro-sign'></i>
