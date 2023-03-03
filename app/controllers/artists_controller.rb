@@ -6,7 +6,7 @@ class ArtistsController < ApplicationController
 
   def index
     if params[:query].present?
-      @artists = Artist.search(params[:query], fields: [:name], suggest: true)
+      @artists = Artist.search(params[:query], fields: [{name: :word_start}])
     else
       @artists = Artist.all
     end
