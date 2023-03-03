@@ -13,6 +13,7 @@ class Admin::BookingsController < ApplicationController
     else
       @booking.update(validated: "declined")
     end
+    @booking.update(just_validated: true)
     redirect_to admin_booking_path(@booking)
   end
 

@@ -10,6 +10,7 @@ class BookingsController < ApplicationController
   def show
     @artist = Artist.find(@booking.artist_id)
     @review = Review.new
+    @booking.update(just_validated: false)
   end
 
   def create
