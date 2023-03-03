@@ -1,8 +1,8 @@
 <%= simple_form_for [:admin, artist] do |f| %>
-  <%= f.input :name, label: "Nom de l'artiste" %>
-  <%= f.input :category, label: "Catégorie", collection: [ "Latino", "Pop", "Rnb", "Ragga", "Rap"] %>
-  <%= f.input :price, label: "Prix de la location" %>
-  <%= f.input :description, label: "Description de l'artiste" %>
-  <%= f.input :photo, as: :file %>
+  <%= f.input :name, label: "Nom de l'artiste", error: "Veuillez saisir un nom d'artiste" %>
+  <%= f.input :category, label: "Catégorie", collection: [ "Latino", "Pop", "Rnb", "Ragga", "Rap"], error: "Veuillez choisir une catégorie" %>
+  <%= f.input :price, label: "Prix de la location", error: "Veuillez saisir un prix" %>
+  <%= f.input :description, label: "Description de l'artiste", error: "Veuillez entrer une description" %>
+  <%= f.input :photo, as: :file, error: "Veuillez ajouter une photo" %>
   <%= f.button :submit, "Valider" %>
 <% end %>
