@@ -45,7 +45,7 @@
 .dropdown-menu {
   border-radius: 5px;
   background-color: #181818;
-  margin: 5px;
+  padding: 10px;
 }
 
 .dropdown-item {
@@ -74,5 +74,44 @@
 
   &:hover {
     border: 1px solid #b15cff;
+  }
+}
+
+.nav-item {
+  display: flex;
+  margin-right: 10px;
+}
+
+.notif {
+  display: flex;
+  align-items: center;
+}
+
+.notification {
+  color: red;
+  position: relative;
+  top: -5px;
+  right: -75px;
+
+  i {
+    font-size: 14px;
+  }
+}
+
+.notification-resa {
+  color: red;
+
+  i {
+    font-size: 14px;
+  }
+}
+
+.notification-admin-resa {
+  color: red;
+  position: relative;
+
+  i {
+    font-size: 14px;
+
   }
 }
