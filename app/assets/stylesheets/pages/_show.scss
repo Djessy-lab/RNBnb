@@ -160,9 +160,35 @@ justify-content: flex-start;
   background-color: #b15cff;
   padding: 5px 18px;
   border: none;
-  max-width: 100;
+  max-width: 300px;
   max-height: 32px;
 
+  p {
+   margin: 5px 0;
+   font-size: 24px;
+  }
+
+  &:hover{
+    background-color: #D5FF5D;
+    color: black;
+  }
+}
+
+.button-return-bookings {
+  text-align: center;
+}
+
+.btn-to-click-return {
+  text-decoration: none;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  background-color: #b15cff;
+  padding: 5px 18px;
+  border: none;
+  max-width: 300PX;
+  max-height: 32px;
 
   p {
    margin: 5px 0;
