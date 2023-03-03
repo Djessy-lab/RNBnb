@@ -22,7 +22,7 @@
         <% if @artist.reviews.first == nil %>
         <% else %>
         <div class="card-review-rating">
-          <p><%= @artist.reviews.first.rating.to_i %>/5
+          <p><%= @average_rating %>/5
           <i class="fa-solid fa-star"></i>
         </div>
         <% end %>
