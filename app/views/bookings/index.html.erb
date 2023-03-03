@@ -1,6 +1,10 @@
 <%= render 'shared/navbar' %>
 <% @future_bookings.each do |booking| %>
-  <div class="container container-ticket">
+  <% if booking.just_validated %>
+    <div class="container container-ticket border-red">
+  <% else %>
+    <div class="container container-ticket">
+  <% end %>
     <% if booking.validated == "approved"%>
       <div class="name-ticket background-green">
     <% elsif booking.validated == "declined" %>
