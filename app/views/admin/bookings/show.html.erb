@@ -49,12 +49,20 @@
           <i class="fa-solid fa-music fa-beat" style="--fa-animation-duration: 0.5s;"></i>
           <i class="fa-solid fa-music fa-beat" style="--fa-animation-duration: 0.6s;"></i>
         </div>
-        <div class = "buttons-modifs">
-          <% if @booking.validated == "pending" %>
-            <%= link_to "Valider", validate_admin_booking_path(@booking, decision: true), data: { turbo_method: :post }, class: "btn-to-click" %>
-            <%= link_to "Refuser", validate_admin_booking_path(@booking, decision: false), data: { turbo_method: :post }, class: "btn-to-click" %>
-          <% end %>
-        </div>
+        <% if @booking.date >= Date.today  %>
+          <div class = "buttons-modifs">
+            <% if @booking.validated == "pending" %>
+              <%= link_to "Valider", validate_admin_booking_path(@booking, decision: true), data: { turbo_method: :post }, class: "btn-to-click" %>
+              <%= link_to "Refuser", validate_admin_booking_path(@booking, decision: false), data: { turbo_method: :post }, class: "btn-to-click" %>
+            <% end %>
+          </div>
+        <% else %>
+        <p> </p>
+        <% end %>
       </div>
   </div>
+</div>
+<br>
+<div class="button-return-bookings">
+<%= link_to "Retourner à mes réservations", admin_bookings_path, class: "btn-to-click-return" %>
 </div>
