@@ -10,19 +10,23 @@ class ApplicationController < ActionController::Base
   end
 
   def notification_user
-    array = current_user.bookings.map do |booking|
-      booking.just_validated
+    if current_user
+      array = current_user.bookings.map do |booking|
+        booking.just_validated
+      end
+      @notif_user = array.include?(true)
     end
-    @notif_user = array.include?(true)
   end
 
   def notification_manager
-    array = []
-    current_user.artists.each do |artist|
-      artist.bookings.each do |booking|
-        array << booking.validated
+    if current_user
+      array = []
+      current_user.artists.each do |artist|
+        artist.bookings.each do |booking|
+          array << booking.validated
+        end
       end
+      @notif_manager = array.include?("pending")
     end
-    @notif_manager = array.include?("pending")
   end
 end
