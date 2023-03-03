@@ -38,7 +38,7 @@
         </div>
           <div class="booking-form">
             <%= simple_form_for [@artist, @booking] do |f| %>
-            <%= f.input :date, html5: true %>
+            <%= f.input :date, html5: true, error: "Veuillez saisir une date" %>
             <%= f.button :submit, "Demande de réservation", class: 'btn btn-outline-light' %>
             <% end %>
           </div>
