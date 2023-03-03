@@ -1,7 +1,8 @@
 require 'rspotify'
 
 class Artist < ApplicationRecord
-  searchkick suggest: [:name]
+  # searchkick suggest: [:name]
+  searchkick word_start: [:name]
   belongs_to :user
   has_many :bookings, dependent: :destroy
   has_many :reviews, dependent: :destroy
